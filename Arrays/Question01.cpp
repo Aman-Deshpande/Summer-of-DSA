@@ -1,5 +1,7 @@
 //  Find the Duplicate Number
 
+// Problem Link: https://leetcode.com/problems/find-the-duplicate-number/
+
 #include <bits/stdc++.h>
 using namespace std;
 
