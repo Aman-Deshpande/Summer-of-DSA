@@ -1,0 +1,34 @@
+// Nth root of integer
+
+// Problem Link: https://www.codingninjas.com/codestudio/problems/1062679?topList=striver-sde-sheet-problems&utm_source=striver&utm_medium=website
+
+#include <bits/stdc++.h>
+using namespace std;
+
+double multiply(double m, int n)
+{
+    double ans = 1.00;
+    while (n > 0)
+    {
+        ans *= m;
+        n--;
+    }
+    return ans;
+}
+double findNthRootOfM(int n, long long m)
+{
+    double l = 0, r = m + 1, esp = 1e-8;
+    while ((r - l) > esp)
+    {
+        double mid = (l + r) / 2.00;
+        if (multiply(mid, n) < (double)m)
+        {
+            l = mid;
+        }
+        else
+        {
+            r = mid;
+        }
+    }
+    return l;
+}
